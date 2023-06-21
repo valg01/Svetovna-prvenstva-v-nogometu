@@ -1,0 +1,119 @@
+
+/* Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Container Styles */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+/* Dropdown Styles */
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-toggle {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  display: none;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 5px 10px;
+  color: #333;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f8f8;
+}
+
+.dropdown.open .dropdown-menu {
+  display: block;
+}
+
+/* Graph Section Styles */
+.row {
+  margin-top: 20px;
+}
+
+.col-md-12 {
+  text-align: center;
+}
+
+h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
