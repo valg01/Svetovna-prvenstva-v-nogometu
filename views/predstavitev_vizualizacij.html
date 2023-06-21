@@ -1,5 +1,24 @@
 % rebase("osnova.html", naslov="Predstavitev Vizualizacij")
 
+<nav>
+    <form action="{{url('/')}}" method="POST" style="width:60%">
+        <div class="dropdown">
+            <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Select Countries
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              % for country in df_c['team_name']:
+              <label class="dropdown-item">
+                <input type="checkbox" name="country_filter" value="{{country}}">
+                {{country}}
+              </label>
+              % end
+            </div>
+          </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</nav>
+
 <div class="row">
     <div class="col-md-12">
         <h3>Tu bodo predstavljene vizualizacije!</h3>
@@ -7,15 +26,10 @@
             uporabnik z vlogo *entuziast* bo videl več grafov, uporabnik z vlogo *ekspert* pa bo jih bo videl največ.
         </p>
     </div>
-    <!-- <br>
-  <iframe id="igraph" scrolling="no" style="border:none;" 
-  seamless="seamless" src="/Users/valgroleger/Svetovna-prvenstva-v-nogometu/views/graphs/red_cards.html"
-  height="500" width="100%"></iframe>
+  <!--  <br>
+   <iframe id="igraph" scrolling="no" style="border:none;"  
+   seamless="seamless" src="{{url('test_graph')}}"
+   height="500" width="100%"></iframe> 
     <br> -->
-    <div id="plot">
-        <!-- Paste the plotly_html string representation here -->
-        {{ plotly1 }}
-    </div>
-    
 </div>
 

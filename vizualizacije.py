@@ -118,7 +118,7 @@ fig.update_layout(
     # barmode='group',  # To group the bars by player
     legend_title='Country'  # Set the legend title
 )
-plotly1_html = fig.to_html()
+plotly1_html = fig.to_html(full_html=False)
 folder_path = "/Users/valgroleger/Svetovna-prvenstva-v-nogometu/views/graphs"
 file_path1 = f"{folder_path}/goals.html"
 fig.write_html(file_path1, include_plotlyjs = "cdn")
@@ -204,3 +204,7 @@ fig4.update_layout(
 #fig4.show()
 file_path4 = f"{folder_path}/red_cards.html"
 fig4.write_html(file_path4, include_plotlyjs = "cdn")
+
+####vse države za filter: 
+countries = """SELECT DISTINCT team_name, team_code, team_id FROM qualified_teams ORDER BY team_id ASC;"""
+df_c = pd.read_sql_query(countries, connection)
