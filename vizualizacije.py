@@ -118,7 +118,7 @@ fig.update_layout(
     # barmode='group',  # To group the bars by player
     legend_title='Country'  # Set the legend title
 )
-
+plotly1_html = fig.to_html()
 folder_path = "/Users/valgroleger/Svetovna-prvenstva-v-nogometu/views/graphs"
 file_path1 = f"{folder_path}/goals.html"
 fig.write_html(file_path1, include_plotlyjs = "cdn")

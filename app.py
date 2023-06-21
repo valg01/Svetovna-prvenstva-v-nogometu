@@ -7,6 +7,7 @@ from Data.Database import Repo
 from Data.Modeli import *
 from Data.Services import AuthService
 from functools import wraps
+from vizualizacije import plotly1_html
 import os
 
 SERVER_PORT = os.environ.get('BOTTLE_PORT', 8080)
@@ -35,7 +36,8 @@ def cookie_required(f):
 @cookie_required
 def index():
     vloga = request.get_cookie("vloga")
-    return template('predstavitev_vizualizacij.html', url=url, vloga=vloga)
+    plotly1 = plotly1_html
+    return template('predstavitev_vizualizacij.html', url=url, vloga=vloga, plotly1 = plotly1)
 
 @get('/vloga')
 def prijava_get():
